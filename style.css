@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  padding: 50px;
+}
+
+header,
+h1 {
+  font-family: "Lexend Giga", serif;
+}
+
+main {
+  padding: 20px;
+}
+
+.category {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding: 30px;
+}
+
+.box {
+  background-color: rgb(46, 38, 42);
+  border-radius: 20px;
+}
+
+.category a {
+  font-size: 20px;
+  font-family: "Bebas Neue", serif;
+  color: rgb(254, 250, 244);
+  text-align: center;
+  line-height: 50px;
+}
+
+.grid_items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 700px) {
+  .category {
+    grid-template-columns: 1fr;
+  }
+
+  .grid_items {
+    grid-template-columns: 1fr;
+  }
+}
