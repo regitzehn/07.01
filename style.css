@@ -15,25 +15,43 @@ a {
   color: black;
 }
 
-header {
+main {
   padding: 50px;
+  margin: 10px;
+}
+
+header {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 30px;
 }
 
 header,
-h1 {
+h1,
+h2,
+p {
   font-family: "Lexend Giga", serif;
 }
 
-main {
-  padding: 20px;
+.product_name,
+h2 {
+  text-align: center;
+}
+
+p {
+  max-width: 65ch;
+  margin-top: 50px;
+}
+
+.overview {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .category {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  margin-top: 2rem;
-  padding: 30px;
 }
 
 .box {
@@ -52,14 +70,35 @@ main {
 .grid_items {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.item {
+  border: 0.4px solid black;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 40px;
+  padding: 18px;
 }
 
 @media screen and (max-width: 700px) {
+  header {
+    font-size: 20px;
+  }
+
   .category {
     grid-template-columns: 1fr;
   }
 
   .grid_items {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
     grid-template-columns: 1fr;
   }
 }
