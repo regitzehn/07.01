@@ -29,8 +29,14 @@ header {
 header,
 h1,
 h2,
-p {
+p,
+.product-text h3 {
   font-family: "Lexend Giga", serif;
+}
+
+.overview {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .product_name,
@@ -43,20 +49,17 @@ p {
   margin-top: 50px;
 }
 
-.overview {
-  text-align: center;
-  margin-bottom: 20px;
+.box {
+  background-color: rgb(46, 38, 42);
+  border-radius: 20px;
 }
+
+/* grids and stuff */
 
 .category {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-}
-
-.box {
-  background-color: rgb(46, 38, 42);
-  border-radius: 20px;
 }
 
 .category a {
@@ -67,22 +70,38 @@ p {
   line-height: 50px;
 }
 
-.grid_items {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 30px;
-}
-
-.item {
-  border: 0.4px solid black;
-}
-
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   margin-top: 40px;
   padding: 18px;
+}
+
+.grid_items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.item {
+  text-align: center;
+  border: 0.4px solid black;
+}
+
+.item:hover {
+  scale: 1.06;
+}
+
+.product-text {
+  text-align: center;
+  margin-top: 10px;
+  border: 0.4px solid black;
+}
+
+.product-text h3,
+.product-text p {
+  margin: auto;
 }
 
 @media screen and (max-width: 700px) {
