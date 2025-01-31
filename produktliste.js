@@ -1,4 +1,4 @@
-let listContainer = document.querySelector("main");
+let listContainer = document.querySelector(".grid_items");
 
 fetch(`https://kea-alt-del.dk/t7/api/products/`)
   .then((response) => response.json())
