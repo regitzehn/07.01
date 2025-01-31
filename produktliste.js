@@ -11,7 +11,7 @@ function showList(products) {
     .map((product) => {
       markup += `<div class="sub">
               <div class="item">
-                <a href="produkt.html" target="_blank">
+                <a href="produkt.html">
                   <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="product image" />
                 </a>
               </div>
