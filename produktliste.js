@@ -12,16 +12,18 @@ function showList(data) {
     .map(
       (product) =>
         `<div class="sub">
-              <div class="item">
-                <a href="produkt.html?id=${product.id}">
-                  <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="product image" />
-                </a>
-              </div>
-              <div class="product-text">
-                <h3>${product.productdisplayname}</h3>
-                <p>${product.price} DKK</p>
-              </div>
-            </div>`
+          <div class="item ${product.soldout ? "soldOut" : ""} ${product.discount ? "onSale" : ""}">
+            ${product.discount ? '<div class="label sale-label">ON SALE</div>' : ""}
+            ${product.soldout ? '<div class="label soldout-label">SOLD OUT</div>' : ""}
+            <a href="produkt.html?id=${product.id}">
+              <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="product image" />
+            </a>
+          </div>
+          <div class="product-text">
+            <h3>${product.productdisplayname}</h3>
+            <p>${product.price} DKK</p>
+          </div>
+        </div>`
     )
     .join("");
   productContainer.innerHTML = markup;
