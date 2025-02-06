@@ -15,6 +15,10 @@ a {
   color: black;
 }
 
+#indexMain {
+  margin-top: 6rem;
+}
+
 main {
   padding: 50px;
   margin: 10px;
@@ -36,7 +40,7 @@ p,
 
 .overview {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 2.5rem;
 }
 
 .product_name,
@@ -49,9 +53,20 @@ p {
   margin-top: 50px;
 }
 
+li,
+tbody {
+  font-family: "Lexend Giga", serif;
+  font-size: 14px;
+}
+
 .box {
   background-color: rgb(46, 38, 42);
   border-radius: 20px;
+  padding: 3rem;
+}
+
+.box:hover {
+  background-color: rgb(164, 134, 188);
 }
 
 /* grids and stuff */
@@ -59,11 +74,11 @@ p {
 .category {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 2.5rem;
 }
 
 .category a {
-  font-size: 20px;
+  font-size: 25px;
   font-family: "Bebas Neue", serif;
   color: rgb(254, 250, 244);
   text-align: center;
@@ -86,13 +101,15 @@ p {
 
 .item {
   text-align: center;
+  position: relative;
+  display: inline-block;
   border: 0.4px solid black;
 }
 
-.item:hover {
-  scale: 1.06;
+.item img {
+  display: block;
+  width: 100%;
 }
-
 .product-text {
   text-align: center;
   margin-top: 10px;
@@ -103,6 +120,35 @@ p {
 .product-text p {
   margin: auto;
 }
+
+/* on sale og sold out */
+
+.grid_items div.soldOut img {
+  opacity: 0.3;
+}
+
+.item.soldOut img {
+  opacity: 0.3;
+}
+
+.label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 8px 12px;
+  color: #fff;
+  font-weight: bold;
+  font-family: "Lexend Giga", serif;
+  border-radius: 5px;
+  z-index: 5;
+}
+
+.sale-label,
+.soldout-label {
+  background-color: rgb(164, 134, 188);
+}
+
+/* media */
 
 @media screen and (max-width: 700px) {
   header {
